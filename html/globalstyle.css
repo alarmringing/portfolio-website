@@ -1,0 +1,27 @@
+html {
+	background-color: #3a3132;
+	color: #fffff9;
+}
+
+body {
+	padding: 5%;
+	font-family: 'Andale Mono';
+}
+
+a:hover {
+	color: red;
+}
+
+#infobar {
+	width: 100%;
+}
+
+#title {
+	text-align: center;
+	font-size: 30px;
+}
+
+@font-face {
+    font-family: 'Andale Mono';
+    src: url(fonts/Andale\ Mono.tff);
+}
