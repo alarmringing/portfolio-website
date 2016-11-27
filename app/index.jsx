@@ -1,9 +1,14 @@
 import React from 'react';
 import { Router, Route, hashHistory, Link } from 'react-router';
 import {render} from 'react-dom';
-import About from './about.jsx';
 import { RouteTransition } from 'react-router-transition';
+import 'grommet/scss/vanilla/index.scss';
+import '../globalstyle.css';
+import {Animation} from 'react-web-animation';
 
+import About from './about.jsx';
+import Art from './art.jsx';
+import Coding from './coding.jsx';
 
 class App extends React.Component {
   render () {
@@ -29,9 +34,9 @@ class Content extends React.Component {
 		var contentStyle = {
 			position: "fixed",
 			height: "100%",
-			top: 150,
 			paddingRight: "7%",
-			left: "27%"
+			left: "27%",
+			width: "70%"
 		};
 		return (
 			<div style = {contentStyle}> 
@@ -58,7 +63,7 @@ class TitleBar extends React.Component {
 		var titleStyle = { 
 			position: 'fixed',
 			width: "100%",
-			fontSize: 50
+			fontSize: 38
 		};
 		return (
 			<div style = {titleStyle}> 
@@ -110,23 +115,11 @@ class MenuItem extends React.Component {
 	}
 }
 
-/*
-render (
-(
-	<Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <Route path="about" component={About}/>
-      <Route path="users" component={Users}>
-        <Route path="/user/:userId" component={User}/>
-      </Route>
-      <Route path="*" component={NoMatch}/>
-    </Route>
-  </Router>
- ), document.getElementById('app'));*/
-
 render( 
 	<Router history={hashHistory}>
     <Route path="/" component={App}>
       <Route path="/about" component={About}/>
+      <Route path='/art' component = {Art}/>
+      <Route path='/coding' component = {Coding}/>
     </Route>
   </Router>, document.getElementById('app'));
