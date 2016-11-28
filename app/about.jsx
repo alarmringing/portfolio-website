@@ -5,6 +5,9 @@ import { Router, Route, hashHistory } from 'react-router';
 export default class About extends React.Component {
 
   render () {
+    var buttonStyle = {
+      padding: 10
+    }
     return (
     	<div>
         <div id="filler" style = {{height: 100}} />
@@ -14,6 +17,17 @@ export default class About extends React.Component {
     		  </p>
   			 <p>I was a gamer since young, but my discovery of indie games brought me to realize the potential of a game as an interactive medium of expression and creativity. This led  to an interest in computer science,&nbsp;which I am pursuing as a major in Stanford right now. Currently my biggest interests lie in Virtual Reality, AI and Neural Computation. </p>
   			 <p>I also happen to design and paint things. What started out from doodling in corners of textbooks ended up as passion in visual art. I believe visual art empowers and contextualizes what is otherwise just a banal piece of material. I try to make my designs nonconforming but inspired by diverse artistic movements at the same time. I also paint digitally and acrylic is my preferred non-digital paint.</p>  
+        </div>
+        <div id = "buttons" style = {{textAlign: 'left'}}>
+          <a style = {buttonStyle} href="https://github.com/alarmringing"> 
+            <img width = '28' height = '28' src = "img/ui/github-icon.png"/>
+          </a>
+          <a style = {buttonStyle} href="https://www.linkedin.com/in/jihee-hwang-58261a84"> 
+            <img width = '30' height = '30' src = "img/ui/linkedin-icon.png"/>
+          </a>
+          <a style = {buttonStyle} href="files/resume.pdf" download="jihee_hwang_resume"> 
+            <img width = '31' height = '31' src = "img/ui/resume-icon.png"/>
+          </a>
         </div>
       </div>
     );
