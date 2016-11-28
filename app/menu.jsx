@@ -88,7 +88,7 @@ export default class Menu extends React.Component {
 		}
 		return (
 			<section>
-				<div style = {backArrowStyle} onClick = {this.goBack} > ⬅ Back </div>
+				<a id = "backbutton" style = {backArrowStyle} onClick = {this.goBack} > ⬅ Back </a>
 				<div style = {containerStyle} >
 					<div id="filler" style = {{height: 100, textAlign: 'right'}}>				
 					</div>

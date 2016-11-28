@@ -16,6 +16,10 @@ export default class Coding extends React.Component {
 			{
 				backgroundImage: "img/ui/gamedev_banner.jpg",
 				label: "Game Development"
+			},
+			{
+				backgroundImage: "img/ui/academics_banner.jpg",
+				label: "Academic Projects"
 			}
 		]
 		return (
