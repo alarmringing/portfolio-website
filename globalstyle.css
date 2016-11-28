@@ -1,11 +1,14 @@
 html {
 	background-color: #3a3132;
 	color: #fffff9;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
 }
 
 body {
 	padding: 3%;
 	font-family: 'Andale Mono';
+	font-weight: lighter;
 }
 
 a {
