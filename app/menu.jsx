@@ -92,18 +92,16 @@ export default class Menu extends React.Component {
 			<section>
 				<a id = "backbutton" style = {backArrowStyle} onClick = {this.goBack} > ⬅ Back </a>
 				<div style = {containerStyle} >
-					<div id="filler" style = {{height: 100, textAlign: 'right'}}>				
+					<div style = {menuStyle} >
+						<table id = "selectMenu"> 
+							<tbody>
+								{rows}
+							</tbody>
+						</table>
 					</div>
-						<div style = {menuStyle} >
-							<table id = "selectMenu"> 
-								<tbody>
-									{rows}
-								</tbody>
-							</table>
-						</div>
-						<div style = {contentStyle} id = "content">
-							{this.state.thisContent[0]}
-						</div>
+					<div style = {contentStyle} id = "content">
+						{this.state.thisContent[0]}
+					</div>
 				</div>
 			</section>
 		);
