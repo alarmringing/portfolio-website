@@ -44,7 +44,8 @@ export default class Menu extends React.Component {
 			width: "100%",
 			height: "100%",
 			position: "absolute",
-			overflow: "scroll"
+			overflow: "scroll",
+			paddingBottom: 300
 		};
 		var contentStyle = {
 			width: "80%"
@@ -102,6 +103,7 @@ export default class Menu extends React.Component {
 					<div style = {contentStyle} id = "content">
 						{this.state.thisContent[0]}
 					</div>
+					<div style = {{height: 200}} />
 				</div>
 			</section>
 		);

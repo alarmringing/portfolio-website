@@ -133,6 +133,16 @@ class Designs extends React.Component {
 				}
 			},
 			{ 
+				src:'img/design_images/contemporary_art_2.jpg', 
+				width: 3508,
+				height: 4961,
+				aspectRatio: 3508/4961,
+				lightboxImage: {
+					src: 'img/design_images/contemporary_art_2.jpg',
+					caption: 'Korean Contemporary Art Forum: 2nd Colloquium'
+				}
+			},
+			{ 
 				src:'img/design_images/2016TalismanSpring.jpg', 
 				width: 3300,
 				height: 5100,
@@ -140,6 +150,16 @@ class Designs extends React.Component {
 				lightboxImage: {
 					src: 'img/design_images/2016TalismanSpring.jpg',
 					caption: '2016 Talisman Spring Show Poster'
+				}
+			},
+			{ 
+				src:'img/design_images/contemporary_art_1.jpg', 
+				width: 3508,
+				height: 4961,
+				aspectRatio: 3508/4961,
+				lightboxImage: {
+					src: 'img/design_images/contemporary_art_1.jpg',
+					caption: 'Korean Contemporary Art Forum: 1st Colloquium'
 				}
 			},
 			{ 

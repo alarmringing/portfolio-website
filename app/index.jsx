@@ -87,7 +87,7 @@ class Menu extends React.Component {
 		var rowStyle = {
 			paddingTop: 21
 		};
-		var menuItemKeys = ["About", "Coding", "Art", "Contact Me"];
+		var menuItemKeys = ["About", "Coding", "Art"];
 		var menuItemRouteID = ['about', 'coding', 'art', 'contact'];
 		var menuItems = [];
 		for(var i=0; i<menuItemKeys.length; i++) {

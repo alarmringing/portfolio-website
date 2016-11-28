@@ -12,7 +12,7 @@ class DontMissIt extends React.Component {
 				<p style= {{font: 'bold', textAlign: 'center'}} >
 					<b>Dont Miss It (PC/Mac/Web, 2016) - Jihee Hwang, Alex Peake, Fletcher Cole, Colin Wright </b>
 				</p>
-				<p style= {{textAlign: 'center', fontSize: 14}}>Click <a href = "http://gamejolt.com/games/don-t-miss-it/123128#close">here</a> to play the game full screen.</p>
+				<p style= {{textAlign: 'center', fontSize: 14}}>Click <a style = {{textDecoration: 'underline'}} href = "http://gamejolt.com/games/don-t-miss-it/123128#close">here</a> to play the game full screen.</p>
 				<p style = {{textAlign: 'left'}}> 
 					An Oculus-compatible experience, Don't Miss It explores the balance of real life and online social life. The player is given 2 different goals: heading to a real-life appointment, and maintaining online social relations with a smartphone. Developed with Unity and C# during Global Game Jam 2016.
 				</p>
@@ -46,7 +46,7 @@ class FractalTrip extends React.Component {
 		return (
 			<div>
 				<div style={{textAlign: 'center'}}>
-					<img src="images/fractal_trip_screenshot_1.jpg" style="width:700px" />
+					<img src="img/gamedev_images/fractal_trip.jpg" width = "500" />
 				</div>
 				<p style= {{font: 'bold', textAlign: 'center'}} >
 					<b> Fractal Trip (PC/Mac, 2016) - Jihee Hwang, Alec Arshavsky, Yvan Quinn </b>
