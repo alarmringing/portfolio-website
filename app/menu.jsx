@@ -46,7 +46,9 @@ export default class Menu extends React.Component {
 			position: "absolute",
 			overflow: "scroll"
 		};
-		var contentStyle = {};
+		var contentStyle = {
+			width: "80%"
+		};
 		var menuStyle = {};
 		var backArrowStyle = {
 			textAlign: 'right',

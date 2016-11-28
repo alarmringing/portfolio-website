@@ -2,7 +2,6 @@ import React from 'react';
 import { Router, Route, hashHistory, Link, Redirect } from 'react-router';
 import {render} from 'react-dom';
 import { RouteTransition } from 'react-router-transition';
-import 'grommet/scss/vanilla/index.scss';
 import '../globalstyle.css';
 import {Animation} from 'react-web-animation';
 

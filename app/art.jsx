@@ -111,7 +111,7 @@ class Paintings extends React.Component {
 			}
 		]
 		return (
-			<div style = {{width: "80%"}}>
+			<div>
         		<Gallery photos={PAINTINGS}  />
         	</div>
     	);
@@ -224,7 +224,7 @@ class Designs extends React.Component {
 			}
 		]
 		return (
-			<div style = {{width: "80%"}}>
+			<div>
         		<Gallery photos={DESIGNS}  />
         	</div>
     	);
