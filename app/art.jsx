@@ -72,17 +72,18 @@ export default class Art extends React.Component {
 		var banners = [
 			{
 				backgroundImage: "img/ui/art_banner.jpg",
-				label: "Art"
+				label: "Art",
+				content: <div> THIS IS ART! </div>
 			},
 			{
 				backgroundImage: "img/ui/design_banner.jpg",
-				label: "Design"
+				label: "Design",
+				content: <div> THIS IS DESIGN! </div>
 			}
 		]
 		return (
 			<div>
-				<Menu banners = {banners} />
-				<Paintings />
+				<Menu banners = {banners} colNum = {2}/>
 			</div>
 		);
 	}

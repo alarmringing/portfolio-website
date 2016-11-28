@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import Banner from './banner.jsx';
+import {Animation, AnimationGroup, Animatable} from 'react-web-animation';
 
 //this.props.contents
 /*
@@ -14,48 +15,95 @@ import Banner from './banner.jsx';
 */
 
 export default class Menu extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			thisContent: [],
+			contentVisible: false,
+			keyframes: [
+	            { opacity: '1', offset: 0 },
+            	{ opacity: '0', offset: 1 }
+	        ],
+			timing: { duration: 200, iterations: 1 }
+		};		
+		this.bannerSelected = this.bannerSelected.bind(this);
+		this.goBack = this.goBack.bind(this);
+	}
+	bannerSelected(e) {
+		this.setState({
+			thisContent: [this.props.banners[e.currentTarget.id].content],
+			contentVisible: true
+		});
+	}
+	goBack() {
+		this.setState({ contentVisible: false });
+	}
+	
 	render() {
-		var menuStyle = {
+		var containerStyle = {
 			width: "100%",
-			height: "100%",
+			height: 5000,
 			position: "absolute",
 			overflow: "scroll"
 		};
-		var colNum = 2;
+		var contentStyle = {};
+		var menuStyle = {};
+		var backArrowStyle = {
+			textAlign: 'right',
+			fontSize: "170%"
+		};
+
+		if(this.state.contentVisible) {
+			menuStyle.display = 'none';
+			contentStyle.display = 'block';
+			backArrowStyle.display = 'block';
+		}else {
+			backArrowStyle.display = 'none';
+			menuStyle.display = 'block';
+			contentStyle.display = 'none';
+		}
+
 		var rows = [];
-		for (var i = 0; i < Math.floor((this.props.banners.length+1)/colNum); i++) {
+		for (var i = 0; i < Math.floor((this.props.banners.length+1)/this.props.colNum); i++) {
 			//for each column
-			var indexL = parseInt(i)*2;
-			console.log('indexL is ' + indexL + " and 3/2 is " + 3/2);
-			var bannerL = this.props.banners[indexL];
-			var bannerR = {backgroundImage: '', label: '', content: {}};
-			if((indexL+1) < this.props.banners.length) {
-				bannerR = this.props.banners[indexL+1];
-				rows.push(
-				<tr> 
-					<td><Banner backgroundImage = {bannerL.backgroundImage} label = {bannerL.label} /></td>
-					<td><Banner backgroundImage = {bannerR.backgroundImage} label = {bannerR.label} /></td>
-				</tr>);
+			var cols = [];
+			for(var j = 0; j< this.props.colNum; j++) {
+				var index = parseInt(i)*2 + parseInt(j);
+				if(index < this.props.banners.length) {
+					var thisBanner = this.props.banners[index];
+					cols.push(
+						<td id = {index} onClick = {this.bannerSelected}>
+							<Banner backgroundImage = {thisBanner.backgroundImage} 
+								isDimmed = {false} label = {thisBanner.label} />
+						</td>
+					);
+				}
+				
 			}
-			else {
-				rows.push(
-				<tr> 
-					<td><Banner backgroundImage = {bannerL.backgroundImage} label = {bannerL.label} /></td>
-				</tr>);
-			}
-			
-			//var banner = this.props.banners[i];
-			//banners.push(<Banner backgroundImage = {banner.backgroundImage} label = {banner.label} />);
+			rows.push(
+				<tr>
+					{cols}
+				</tr>
+			);
 		}
 		return (
-			<div style = {menuStyle} >
-				<div id="filler" style = {{height: 100}} />
-				<table> 
-					<tbody>
-						{rows}
-					</tbody>
-				</table>
-			</div>
+			<section>
+				<div style = {backArrowStyle} onClick = {this.goBack} > ⬅ Back </div>
+				<div style = {containerStyle} >
+					<div id="filler" style = {{height: 100, textAlign: 'right'}}>				
+					</div>
+						<div style = {menuStyle} >
+							<table id = "selectMenu"> 
+								<tbody>
+									{rows}
+								</tbody>
+							</table>
+						</div>
+						<div style = {contentStyle} id = "content">
+							{this.state.thisContent[0]}
+						</div>
+				</div>
+			</section>
 		);
 	}
 }

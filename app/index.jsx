@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, hashHistory, Link } from 'react-router';
+import { Router, Route, hashHistory, Link, Redirect } from 'react-router';
 import {render} from 'react-dom';
 import { RouteTransition } from 'react-router-transition';
 import 'grommet/scss/vanilla/index.scss';
@@ -9,6 +9,8 @@ import {Animation} from 'react-web-animation';
 import About from './about.jsx';
 import Art from './art.jsx';
 import Coding from './coding.jsx';
+import MainScreen from './mainScreen.jsx';
+
 
 class App extends React.Component {
   render () {
@@ -36,7 +38,8 @@ class Content extends React.Component {
 			height: "100%",
 			paddingRight: "7%",
 			left: "27%",
-			width: "70%"
+			width: "70%",
+			textAlign: "center"
 		};
 		return (
 			<div style = {contentStyle}> 
@@ -117,7 +120,9 @@ class MenuItem extends React.Component {
 
 render( 
 	<Router history={hashHistory}>
+	<Redirect from="/" to="/index" />
     <Route path="/" component={App}>
+      <Route path="/index" component={MainScreen}/>
       <Route path="/about" component={About}/>
       <Route path='/art' component = {Art}/>
       <Route path='/coding' component = {Coding}/>

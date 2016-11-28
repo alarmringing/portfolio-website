@@ -19,7 +19,7 @@ export default class Coding extends React.Component {
 			}
 		]
 		return (
-			<Menu banners = {banners}/>
+			<Menu banners = {banners} colNum = {2}/>
 		);
 
 	}
