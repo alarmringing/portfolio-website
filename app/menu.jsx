@@ -42,7 +42,7 @@ export default class Menu extends React.Component {
 	render() {
 		var containerStyle = {
 			width: "100%",
-			height: 5000,
+			height: "100%",
 			position: "absolute",
 			overflow: "scroll"
 		};
