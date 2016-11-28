@@ -47,7 +47,7 @@ class Blockchain extends React.Component {
 		return (
 			<div>
 				<div style={{textAlign: 'center'}}>
-					<img src = "img/blockchain_images/screenshot.png" width = "800" />
+					<img src = "img/blockchain_images/screenshot.jpg" width = "800" />
 				</div>
 				<p style= {{font: 'bold', textAlign: 'center'}} >
 					<b>Decentralized Exchange (temp) - React/Redux, 2016 </b>
