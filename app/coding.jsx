@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import Menu from './menu.jsx';
-
+import Gamedev from './gamedev.jsx';
 
 class Research extends React.Component {
 	render() {
@@ -52,15 +52,16 @@ export default class Coding extends React.Component {
 			},
 			{
 				backgroundImage: "img/ui/blockchain_banner.jpg",
-				label: "Blockchain Development"
+				label: "Blockchain\nDevelopment"
 			},
 			{
 				backgroundImage: "img/ui/gamedev_banner.jpg",
-				label: "Game Development"
+				label: "Game\nDevelopment",
+				content: <Gamedev /> 
 			},
 			{
 				backgroundImage: "img/ui/academics_banner.jpg",
-				label: "Academic Projects"
+				label: "Academic\nProjects"
 			}
 		]
 		return (
