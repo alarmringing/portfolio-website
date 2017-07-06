@@ -10,6 +10,46 @@ class Paintings extends React.Component {
 		const PAINTINGS = 
 		[
 			{ 
+				src:'img/art_images/africa.jpg', 
+				width: 2336,
+				height: 3264,
+				aspectRatio: 2336/3264,
+				lightboxImage: {
+					src: 'img/art_images/africa.jpg',
+					caption: 'Brush Sketch 1 (2017)'
+				}
+			},
+			{ 
+				src:'img/art_images/crouched.jpg', 
+				width: 1886,
+				height: 3040,
+				aspectRatio: 1886/3040,
+				lightboxImage: {
+					src: 'img/art_images/crouched.jpg',
+					caption: 'Brush Sketch 2 (2017)'
+				}
+			},
+			{ 
+				src:'img/art_images/hanbok.jpg', 
+				width: 2084,
+				height: 3199,
+				aspectRatio: 2084/3199,
+				lightboxImage: {
+					src:'img/art_images/hanbok.jpg',
+					caption: 'Brush Sketch 3 (2017)'
+				}
+			},
+			{ 
+				src:'img/art_images/head.jpg', 
+				width: 2437,
+				height: 2682,
+				aspectRatio: 2437/2682,
+				lightboxImage: {
+					src: 'img/art_images/head.jpg',
+					caption: 'Brush Sketch 4 (2017)'
+				}
+			},
+			{ 
 				src:'img/art_images/forest_rock.jpg', 
 				width: 730,
 				height: 1095,
@@ -60,26 +100,6 @@ class Paintings extends React.Component {
 				}
 			}, 
 			{
-				src: 'img/art_images/baam.jpg',
-				width: 900,
-				height: 1400,
-				aspectRatio: 900/1400,
-				lightboxImage: {
-					src: 'img/art_images/baam.jpg',
-					caption: 'Baam (2013, Digital Art)'
-				}
-			},
-			{
-				src: 'img/art_images/cascade.jpg',
-				width: 1280,
-				height: 853,
-				aspectRatio: 1280/853,
-				lightboxImage: {
-					src: 'img/art_images/cascade.jpg',
-					caption: "Cascade (2013, Acrylic on Canvas)"
-				}
-			},
-			{
 				src: 'img/art_images/kubera.jpg',
 				width: 960,
 				height: 951,
@@ -100,13 +120,23 @@ class Paintings extends React.Component {
 				}
 			},
 			{
-				src: 'img/art_images/the_reversal.jpg',
+				src: 'img/art_images/cascade.jpg',
 				width: 1280,
 				height: 853,
 				aspectRatio: 1280/853,
 				lightboxImage: {
-					src: 'img/art_images/the_reversal.jpg',
-					caption: 'The Reversal (2014, Acrylic on Canvas)'
+					src: 'img/art_images/cascade.jpg',
+					caption: "Cascade (2013, Acrylic on Canvas)"
+				}
+			},
+			{
+				src: 'img/art_images/baam.jpg',
+				width: 900,
+				height: 1400,
+				aspectRatio: 900/1400,
+				lightboxImage: {
+					src: 'img/art_images/baam.jpg',
+					caption: 'Baam (2013, Digital Art)'
 				}
 			}
 		]
@@ -122,6 +152,16 @@ class Designs extends React.Component {
 	render() {
 		const DESIGNS = 
 		[
+			{
+				src:'img/design_images/namecard.jpg', 
+				width: 283,
+				height: 510,
+				aspectRatio: 283/510,
+				lightboxImage: {
+					src: 'img/design_images/namecard.jpg',
+					caption: 'Namecard Design (2017)'
+				}
+			},
 			{ 
 				src:'img/design_images/2016TalismanAudition.jpg', 
 				width: 2550,
