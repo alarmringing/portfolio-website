@@ -100,6 +100,16 @@ class Paintings extends React.Component {
 				}
 			}, 
 			{
+				src: 'img/art_images/baam.jpg',
+				width: 900,
+				height: 1400,
+				aspectRatio: 900/1400,
+				lightboxImage: {
+					src: 'img/art_images/baam.jpg',
+					caption: 'Baam (2013, Digital Art)'
+				}
+			},
+			{
 				src: 'img/art_images/kubera.jpg',
 				width: 960,
 				height: 951,
@@ -127,16 +137,6 @@ class Paintings extends React.Component {
 				lightboxImage: {
 					src: 'img/art_images/cascade.jpg',
 					caption: "Cascade (2013, Acrylic on Canvas)"
-				}
-			},
-			{
-				src: 'img/art_images/baam.jpg',
-				width: 900,
-				height: 1400,
-				aspectRatio: 900/1400,
-				lightboxImage: {
-					src: 'img/art_images/baam.jpg',
-					caption: 'Baam (2013, Digital Art)'
 				}
 			}
 		]
